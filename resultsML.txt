@@ -1,0 +1,78 @@
+lr = LogisticRegression(maxIter=20, regParam=0.001)
+=== Evaluation Metrics ===
+Accuracy       : 0.7497
+Precision      : 0.7193
+Recall         : 0.7497
+F1 Score       : 0.7249
+
+lr = LogisticRegression(maxIter=20, regParam=0.001, elasticNetParam=0.8)
+=== Evaluation Metrics ===
+Accuracy       : 0.7348
+Precision      : 0.6914
+Recall         : 0.7348
+F1 Score       : 0.6919
+
+lr = LogisticRegression(maxIter=10, regParam=0.001, elasticNetParam=0.8)
+=== Evaluation Metrics ===
+Accuracy       : 0.7312
+Precision      : 0.6874
+Recall         : 0.7312
+F1 Score       : 0.6854
+
+lr = LogisticRegression(maxIter=10, regParam=0.01, elasticNetParam=0.8)
+=== Evaluation Metrics ===
+Accuracy       : 0.6777
+Precision      : 0.6199
+Recall         : 0.6777
+F1 Score       : 0.5935
+
+lr = LogisticRegression(maxIter=50, regParam=0.01, elasticNetParam=0.8)
+=== Evaluation Metrics ===
+Accuracy       : 0.6795
+Precision      : 0.6198
+Recall         : 0.6795
+F1 Score       : 0.5975
+
+lr = LogisticRegression(maxIter=25, regParam=0.001, elasticNetParam=0.8)
+=== Evaluation Metrics ===
+Accuracy       : 0.7359
+Precision      : 0.6929
+Recall         : 0.7359
+F1 Score       : 0.6933
+
+lr = LogisticRegression(maxIter=25, regParam=0.001, elasticNetParam=0.7)
+=== Evaluation Metrics ===
+Accuracy       : 0.7377
+Precision      : 0.6957
+Recall         : 0.7377
+F1 Score       : 0.6964
+
+nb = NaiveBayes(labelCol="label", featuresCol="rawFeatures", modelType="multinomial")
+=== Evaluation Metrics (Naive Bayes) ===
+Accuracy       : 0.6906
+Precision      : 0.6845
+Recall         : 0.6906
+F1 Score       : 0.6870
+
+nb = NaiveBayes(labelCol="label", featuresCol="rawFeatures", modelType="multinomial", smoothing=0.7)
+
+=== Evaluation Metrics (Naive Bayes) ===
+Accuracy       : 0.6907
+Precision      : 0.6848
+Recall         : 0.6907
+F1 Score       : 0.6872
+
+nb = NaiveBayes(labelCol="label", featuresCol="rawFeatures", modelType="multinomial", smoothing=0.9)
+=== Evaluation Metrics (Naive Bayes) ===
+Accuracy       : 0.6908
+Precision      : 0.6847
+Recall         : 0.6908
+F1 Score       : 0.6872
+
+model = Sequential([
+    Embedding(input_dim=10000, output_dim=64, input_length=200),
+    LSTM(64),
+    Dropout(0.5),
+    Dense(32, activation='relu'),
+    Dense(len(le.classes_), activation='softmax')
+])
