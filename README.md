@@ -2,7 +2,6 @@
 # 🧠 Big Data Project – Amazon Product Reviews
 
 **Author:** Toma Sabin-Sebastian  
-**Group:** 412  
 **Dataset:** [Amazon Product Reviews – Kaggle](https://www.kaggle.com/datasets/arhamrumi/amazon-product-reviews)
 
 ---
